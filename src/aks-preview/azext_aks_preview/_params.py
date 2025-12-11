@@ -1985,7 +1985,7 @@ def load_arguments(self, _):
                 target="--skip-gpu-driver-install",
                 redirect="--gpu-driver",
                 hide=True
-            )
+            )c
         )
         c.argument(
             "gpu_driver",
@@ -2119,6 +2119,7 @@ def load_arguments(self, _):
             "disable_fips_image",
             action="store_true"
         )
+<<<<<<< Updated upstream
         # local DNS
         c.argument(
             'localdns_config',
@@ -2128,6 +2129,11 @@ def load_arguments(self, _):
             "node_vm_size",
             options_list=["--node-vm-size", "-s"],
             completer=get_vm_size_completion_list,
+=======
+        c.argument(
+            "gpu_driver",
+            arg_type=get_enum_type(gpu_driver_install_modes)
+>>>>>>> Stashed changes
         )
 
     with self.argument_context("aks nodepool upgrade") as c:
