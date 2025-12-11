@@ -1985,7 +1985,7 @@ def load_arguments(self, _):
                 target="--skip-gpu-driver-install",
                 redirect="--gpu-driver",
                 hide=True
-            )c
+            )
         )
         c.argument(
             "gpu_driver",

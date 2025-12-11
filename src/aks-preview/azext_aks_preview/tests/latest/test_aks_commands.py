@@ -6523,7 +6523,7 @@ class AzureKubernetesServiceScenarioTest(ScenarioTest):
             checks=[self.check("provisioningState", "Succeeded")],
         )
 
-        # update the second aks cluster using this snapshot
+        # update nodepool using --gpu-driver None
         update_nodepool_cmd = (
             "aks nodepool update --resource-group {resource_group} --cluster-name={name} --name={nodepool_name} "
             "--gpu-driver None "
